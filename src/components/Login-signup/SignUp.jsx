@@ -44,7 +44,7 @@ const SignUp = () => {
             .then(result => {
                 upDateProfile(Name, Photo);
                 const newUser = { email, password, Name, Photo: Photo ? Photo : 'https://i.ibb.co/3dqGpTW/dummy-prof.png' }
-                axios.post('http://localhost:5000/users', newUser)
+                axios.post('https://advisoropediia-backend.vercel.app/users', newUser)
                     .then(res => {
                         console.log(res.data);
                         if (res.data.insertedId) {

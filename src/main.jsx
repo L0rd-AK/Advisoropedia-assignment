@@ -10,6 +10,7 @@ import Login from './components/Login-signup/Login.jsx';
 import SignUp from './components/Login-signup/SignUp.jsx';
 import AuthProvider from './components/Provider/AuthProvider.jsx';
 import Home from './components/home/Home.jsx';
+import CreatePost from './components/createPost/CreatePost.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <SignUp />,
+      },
+      {
+        path: "/createPost",
+        element: <CreatePost />,
       },
     ]
   }

@@ -43,7 +43,7 @@ const AuthProvider = ({ children }) => {
     const logOut = () => {
         const logedEmail={email:user.email}
         setLoading(true);
-        axios.post('http://localhost:5000/logout',logedEmail,{withCredentials:true})
+        axios.post('https://advisoropediia-backend.vercel.app/logout',logedEmail,{withCredentials:true})
         .then(res=>{
             console.log(res.data);
         })
@@ -59,7 +59,7 @@ const AuthProvider = ({ children }) => {
                 if(currentUser){
                     const logedEmail={email:currentUser.email}
 
-                    axios.post('http://localhost:5000/jwt',logedEmail,{withCredentials:true})
+                    axios.post('https://advisoropediia-backend.vercel.app/jwt',logedEmail,{withCredentials:true})
                     .then(res=>{
                         // console.log(res.data);
                         if(res.data.token){
