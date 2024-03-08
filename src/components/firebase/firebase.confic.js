@@ -2,12 +2,12 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDFiEuIhi9pnemJkNMTZto-7zqNbQOm7p8",
-  authDomain: "advisoropedia-7d958.firebaseapp.com",
-  projectId: "advisoropedia-7d958",
-  storageBucket: "advisoropedia-7d958.appspot.com",
-  messagingSenderId: "857680797118",
-  appId: "1:857680797118:web:1c11711e3b74b01e122def"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase
