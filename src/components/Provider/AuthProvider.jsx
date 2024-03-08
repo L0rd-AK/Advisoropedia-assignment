@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
-import app from "../../firebase/firebase.config";
+import app from "../firebase/firebase.confic";
 import PropTypes from 'prop-types';
 import axios from "axios";
 export const AuthContext = createContext(null);
@@ -59,7 +59,7 @@ const AuthProvider = ({ children }) => {
                 if(currentUser){
                     const logedEmail={email:currentUser.email}
 
-                    axios.post('verifyToken/jwt',logedEmail,{withCredentials:true})
+                    axios.post('http://localhost:5000/jwt',logedEmail,{withCredentials:true})
                     .then(res=>{
                         // console.log(res.data);
                         if(res.data.token){
